@@ -1,0 +1,9 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Large files exceeding GitHub 100MB limit
+output_bulk/data/
+output_bulk/final/articles_bulk.csv
+articles_bulk.csv

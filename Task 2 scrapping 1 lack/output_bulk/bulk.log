@@ -1,0 +1,206 @@
+[2026-10-25 17:30:32,822] [web:bbc] reading robots.txt
+[2026-10-25 17:30:33,963] [web:bbc] reading sitemaps
+[2026-10-25 17:30:53,842] [web:bbc] scraping (113 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 17:31:21,184] [web:bbc] done
+[2026-10-25 17:39:17,824] [web:france24] reading robots.txt
+[2026-10-25 17:39:17,825] [web:abc_news] reading robots.txt
+[2026-10-25 17:39:17,827] [web:aljazeera] reading robots.txt
+[2026-10-25 17:39:17,827] [web:cnn] reading robots.txt
+[2026-10-25 17:39:17,828] [web:fox_news] reading robots.txt
+[2026-10-25 17:39:17,830] [web:nytimes] reading robots.txt
+[2026-10-25 17:39:17,832] [web:washington_post] reading robots.txt
+[2026-10-25 17:39:17,833] [web:ary_news] reading robots.txt
+[2026-10-25 17:39:17,836] [web:guardian] reading robots.txt
+[2026-10-25 17:39:17,838] [web:express_tribune] reading robots.txt
+[2026-10-25 17:39:17,839] [web:bbc] done
+[2026-10-25 17:39:17,841] [web:npr] reading robots.txt
+[2026-10-25 17:39:17,844] [web:dw] reading robots.txt
+[2026-10-25 17:39:17,845] [web:sky_news] reading robots.txt
+[2026-10-25 17:39:17,848] [web:cbs_news] reading robots.txt
+[2026-10-25 17:39:17,853] [web:dawn] reading robots.txt
+[2026-10-25 17:39:17,852] [web:nbc_news] reading robots.txt
+[2026-10-25 17:39:17,856] [web:the_news_pk] reading robots.txt
+[2026-10-25 17:39:17,856] [web:independent] reading robots.txt
+[2026-10-25 17:39:17,858] [web:geo_tv] reading robots.txt
+[2026-10-25 17:39:20,471] [web:dawn] scraping (539 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 17:39:20,974] [web:geo_tv] scraping (231 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 17:39:20,985] [web:ary_news] scraping (118 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 17:39:21,121] [web:washington_post] scraping (5714 URLs, 0.5 req/s, 2 threads)
+[2026-10-25 17:39:21,607] [web:the_news_pk] scraping (300 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 17:39:23,208] [web:guardian] scraping (302 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 17:39:24,540] [web:cbs_news] scraping (18419 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 17:39:25,229] [web:fox_news] scraping (20156 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 17:39:25,830] [web:abc_news] reading sitemaps
+[2026-10-25 17:39:26,175] [web:express_tribune] scraping (25002 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 17:39:27,475] [web:sky_news] scraping (23404 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 17:39:28,080] [web:nytimes] scraping (9084 URLs, 0.5 req/s, 2 threads)
+[2026-10-25 17:39:28,441] [web:independent] scraping (18043 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 17:39:28,710] [web:aljazeera] reading sitemaps
+[2026-10-25 17:39:29,197] [web:dw] scraping (18449 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 17:39:29,910] [web:npr] scraping (20626 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 17:39:29,954] [web:cnn] scraping (18022 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 17:39:30,171] [web:nbc_news] scraping (18425 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 17:39:33,974] [web:france24] scraping (18815 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 17:39:43,580] [web:abc_news] NO URLS FOUND (site may block sitemaps) - Common Crawl/datasets cover it
+[2026-10-25 17:39:46,157] [web:aljazeera] NO URLS FOUND (site may block sitemaps) - Common Crawl/datasets cover it
+[2026-10-25 17:40:02,869] [web:the_news_pk] done
+[2026-10-25 17:40:08,698] [web:npr] done
+[2026-10-25 17:40:09,539] [web:fox_news] done
+[2026-10-25 17:40:09,603] [web:geo_tv] done
+[2026-10-25 17:40:14,562] [web:ary_news] done
+[2026-10-25 17:40:14,866] [web:express_tribune] done
+[2026-10-25 17:40:29,930] [web:dw] done
+[2026-10-25 17:40:34,442] [web:guardian] done
+[2026-10-25 17:40:37,376] [web:independent] done
+[2026-10-25 17:40:53,116] [web:france24] done
+[2026-10-25 17:40:59,895] [web:cbs_news] done
+[2026-10-25 17:41:08,907] [web:nbc_news] done
+[2026-10-25 17:42:10,046] [web:nytimes] STOPPED: BLOCKED (10 blocks in a row)
+[2026-10-25 17:43:33,138] [web:cnn] done
+[2026-10-25 17:43:34,173] [web:sky_news] STOPPED: BLOCKED (10 blocks in a row)
+[2026-10-25 17:43:48,546] [web:dawn] done
+[2026-10-25 17:47:08,823] [web:washington_post] STOPPED: PAYWALLED (almost every article is too short)
+[2026-10-25 18:10:39,586] [web:abc_news] reading robots.txt
+[2026-10-25 18:10:39,596] [web:aljazeera] reading robots.txt
+[2026-10-25 18:10:39,599] [web:bbc] reading robots.txt
+[2026-10-25 18:10:39,603] [web:nytimes] reading robots.txt
+[2026-10-25 18:10:39,610] [web:washington_post] reading robots.txt
+[2026-10-25 18:10:39,611] [web:france24] reading robots.txt
+[2026-10-25 18:10:39,632] [web:ary_news] reading robots.txt
+[2026-10-25 18:10:39,633] [web:fox_news] reading robots.txt
+[2026-10-25 18:10:39,638] [web:cnn] reading robots.txt
+[2026-10-25 18:10:39,647] [web:express_tribune] reading robots.txt
+[2026-10-25 18:10:39,648] [web:sky_news] reading robots.txt
+[2026-10-25 18:10:39,683] [web:cbs_news] reading robots.txt
+[2026-10-25 18:10:39,684] [web:dw] reading robots.txt
+[2026-10-25 18:10:39,686] [web:nbc_news] reading robots.txt
+[2026-10-25 18:10:39,684] [web:npr] reading robots.txt
+[2026-10-25 18:10:39,687] [web:the_news_pk] reading robots.txt
+[2026-10-25 18:10:39,687] [web:guardian] reading robots.txt
+[2026-10-25 18:10:39,689] [web:dawn] reading robots.txt
+[2026-10-25 18:10:39,690] [web:geo_tv] reading robots.txt
+[2026-10-25 18:10:39,692] [web:independent] reading robots.txt
+[2026-10-25 18:10:40,725] [web:aljazeera] reading sitemaps
+[2026-10-25 18:10:42,481] [web:washington_post] scraping (5713 URLs, 0.5 req/s, 2 threads)
+[2026-10-25 18:10:42,664] [web:ary_news] scraping (98 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 18:10:42,739] [web:dawn] scraping (517 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 18:10:43,788] [web:the_news_pk] scraping (278 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 18:10:44,049] [web:bbc] scraping (91 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 18:10:44,272] [web:nytimes] scraping (9084 URLs, 0.5 req/s, 2 threads)
+[2026-10-25 18:10:44,983] [web:guardian] scraping (280 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 18:10:45,854] [web:abc_news] reading sitemaps
+[2026-10-25 18:10:46,116] [web:independent] scraping (18022 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 18:10:46,189] [web:fox_news] scraping (20135 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 18:10:46,467] [web:geo_tv] scraping (209 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 18:10:47,516] [web:cbs_news] scraping (18397 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 18:10:50,665] [web:dw] scraping (18427 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 18:10:51,054] [web:cnn] scraping (18000 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 18:10:51,585] [web:express_tribune] scraping (24980 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 18:10:52,153] [web:sky_news] scraping (23400 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 18:10:52,191] [web:nbc_news] scraping (18403 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 18:10:53,629] [web:npr] scraping (20604 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 18:10:57,261] [web:aljazeera] NO URLS FOUND (site may block sitemaps) - Common Crawl/datasets cover it
+[2026-10-25 18:11:02,984] [web:france24] scraping (18795 URLs, 1.0 req/s, 3 threads)
+[2026-10-25 18:11:05,559] [web:abc_news] NO URLS FOUND (site may block sitemaps) - Common Crawl/datasets cover it
+[2026-10-25 18:13:34,263] [web:nytimes] STOPPED: BLOCKED (10 blocks in a row)
+[2026-10-25 18:13:44,309] [web:ary_news] finished (ran out of URLs)
+[2026-10-25 18:14:47,563] [web:nbc_news] STOPPED: PAYWALLED (almost every article is too short)
+[2026-10-25 18:16:41,433] [web:bbc] finished (ran out of URLs)
+[2026-10-25 18:17:23,981] [web:geo_tv] finished (ran out of URLs)
+[2026-10-25 18:18:24,623] [web:the_news_pk] finished (ran out of URLs)
+[2026-10-25 18:19:10,303] [web:washington_post] STOPPED: PAYWALLED (almost every article is too short)
+[2026-10-25 18:23:01,256] [web:guardian] finished (ran out of URLs)
+[2026-10-25 18:24:54,251] [web:sky_news] STOPPED: BLOCKED (10 blocks in a row)
+[2026-10-25 18:37:19,769] [web:cnn] STOPPED: BLOCKED (10 blocks in a row)
+[2026-10-25 18:50:24,612] [web:dawn] finished (ran out of URLs)
+[2026-10-25 21:29:20,342] [web:dw] STOPPED: TOO MANY NETWORK ERRORS
+[2026-10-25 21:37:15,787] [web:fox_news] done
+[2026-10-25 21:54:18,285] [web:npr] done
+[2026-10-25 22:13:31,195] [web:independent] done
+[2026-10-25 22:22:33,947] [web:express_tribune] done
+[2026-10-25 22:25:39,784] [web:cbs_news] done
+[2026-10-25 22:31:22,892] [web:france24] done
+[2026-10-26 14:10:44,058] [web:cnn] reading robots.txt
+[2026-10-26 14:10:48,861] [web:cnn] scraping (17939 URLs, 1.0 req/s, 3 threads)
+[2026-10-26 14:14:41,613] [web:bbc] reading robots.txt
+[2026-10-26 14:14:41,618] [web:ary_news] reading robots.txt
+[2026-10-26 14:14:41,693] [web:cnn] reading robots.txt
+[2026-10-26 14:14:41,767] [web:the_news_pk] reading robots.txt
+[2026-10-26 14:14:41,916] [web:geo_tv] reading robots.txt
+[2026-10-26 14:14:42,018] [web:guardian] reading robots.txt
+[2026-10-26 14:14:42,139] [web:dawn] reading robots.txt
+[2026-10-26 14:14:43,724] [web:the_news_pk] reading sitemaps
+[2026-10-26 14:14:43,803] [web:bbc] NO URLS FOUND (site may block sitemaps) - Common Crawl/datasets cover it
+[2026-10-26 14:14:44,031] [web:ary_news] reading sitemaps
+[2026-10-26 14:14:44,690] [web:guardian] reading sitemaps
+[2026-10-26 14:14:45,599] [web:cnn] scraping (17939 URLs, 1.0 req/s, 3 threads)
+[2026-10-26 14:14:46,006] [web:dawn] reading sitemaps
+[2026-10-26 14:14:46,083] [web:geo_tv] scraping (12 URLs, 1.0 req/s, 3 threads)
+[2026-10-26 14:14:46,513] [web:guardian] scraping (140 URLs, 1.0 req/s, 3 threads)
+[2026-10-26 14:14:47,156] [web:dw] reading robots.txt
+[2026-10-26 14:14:49,955] [web:cbs_news] reading robots.txt
+[2026-10-26 14:14:50,265] [web:express_tribune] reading robots.txt
+[2026-10-26 14:14:52,590] [web:dw] scraping (16096 URLs, 1.0 req/s, 3 threads)
+[2026-10-26 14:14:53,980] [web:france24] reading robots.txt
+[2026-10-26 14:14:54,067] [web:fox_news] reading robots.txt
+[2026-10-26 14:14:55,360] [web:express_tribune] scraping (19000 URLs, 1.0 req/s, 3 threads)
+[2026-10-26 14:14:56,618] [web:cbs_news] scraping (12418 URLs, 1.0 req/s, 3 threads)
+[2026-10-26 14:14:57,681] [web:the_news_pk] scraping (31 URLs, 1.0 req/s, 3 threads)
+[2026-10-26 14:14:59,776] [web:fox_news] scraping (14154 URLs, 1.0 req/s, 3 threads)
+[2026-10-26 14:15:00,164] [web:independent] reading robots.txt
+[2026-10-26 14:15:03,284] [web:ary_news] scraping (41 URLs, 1.0 req/s, 3 threads)
+[2026-10-26 14:15:05,269] [web:independent] scraping (12043 URLs, 1.0 req/s, 3 threads)
+[2026-10-26 14:15:06,542] [web:france24] scraping (12813 URLs, 1.0 req/s, 3 threads)
+[2026-10-26 14:15:07,518] [web:npr] reading robots.txt
+[2026-10-26 14:15:12,409] [web:npr] scraping (14624 URLs, 1.0 req/s, 3 threads)
+[2026-10-26 14:15:18,698] [web:dawn] scraping (234 URLs, 1.0 req/s, 3 threads)
+[2026-10-26 14:15:26,818] [web:geo_tv] finished (ran out of URLs)
+[2026-10-26 14:15:50,305] [web:dw] STOPPED: PAYWALLED (almost every article is too short)
+[2026-10-26 14:15:50,387] [web:the_news_pk] finished (ran out of URLs)
+[2026-10-26 14:15:51,825] [web:independent] STOPPED: PAYWALLED (almost every article is too short)
+[2026-10-26 14:15:57,921] [web:ary_news] finished (ran out of URLs)
+[2026-10-26 14:16:03,415] [web:express_tribune] STOPPED: PAYWALLED (almost every article is too short)
+[2026-10-26 14:16:04,775] [web:france24] STOPPED: PAYWALLED (almost every article is too short)
+[2026-10-26 14:16:05,707] [web:npr] STOPPED: PAYWALLED (almost every article is too short)
+[2026-10-26 14:16:07,424] [web:fox_news] STOPPED: PAYWALLED (almost every article is too short)
+[2026-10-26 14:18:14,416] [web:bbc] reading robots.txt
+[2026-10-26 14:18:14,437] [web:ary_news] reading robots.txt
+[2026-10-26 14:18:14,512] [web:cnn] reading robots.txt
+[2026-10-26 14:18:14,608] [web:the_news_pk] reading robots.txt
+[2026-10-26 14:18:14,685] [web:geo_tv] reading robots.txt
+[2026-10-26 14:18:14,964] [web:guardian] reading robots.txt
+[2026-10-26 14:18:15,042] [web:dawn] reading robots.txt
+[2026-10-26 14:18:16,497] [web:ary_news] scraping (11 URLs, 1.0 req/s, 3 threads)
+[2026-10-26 14:18:17,354] [web:cnn] scraping (17939 URLs, 1.0 req/s, 3 threads)
+[2026-10-26 14:18:17,374] [web:guardian] scraping (57 URLs, 1.0 req/s, 3 threads)
+[2026-10-26 14:18:17,402] [web:the_news_pk] scraping (3 URLs, 1.0 req/s, 3 threads)
+[2026-10-26 14:18:17,718] [web:dawn] scraping (180 URLs, 1.0 req/s, 3 threads)
+[2026-10-26 14:18:17,843] [web:bbc] NO URLS FOUND (site may block sitemaps) - Common Crawl/datasets cover it
+[2026-10-26 14:18:18,889] [web:dw] reading robots.txt
+[2026-10-26 14:18:19,023] [web:geo_tv] scraping (12 URLs, 1.0 req/s, 3 threads)
+[2026-10-26 14:18:23,085] [web:dw] scraping (16096 URLs, 1.0 req/s, 3 threads)
+[2026-10-26 14:18:23,096] [web:cbs_news] reading robots.txt
+[2026-10-26 14:18:23,208] [web:express_tribune] reading robots.txt
+[2026-10-26 14:18:24,200] [web:france24] reading robots.txt
+[2026-10-26 14:18:24,364] [web:fox_news] reading robots.txt
+[2026-10-26 14:18:24,667] [web:independent] reading robots.txt
+[2026-10-26 14:18:25,618] [web:npr] reading robots.txt
+[2026-10-26 14:18:26,625] [web:the_news_pk] finished (ran out of URLs)
+[2026-10-26 14:18:28,299] [web:cbs_news] scraping (12416 URLs, 1.0 req/s, 3 threads)
+[2026-10-26 14:18:30,202] [web:express_tribune] scraping (19000 URLs, 1.0 req/s, 3 threads)
+[2026-10-26 14:18:30,205] [web:fox_news] scraping (14154 URLs, 1.0 req/s, 3 threads)
+[2026-10-26 14:18:30,767] [web:independent] scraping (12043 URLs, 1.0 req/s, 3 threads)
+[2026-10-26 14:18:34,731] [web:npr] scraping (14624 URLs, 1.0 req/s, 3 threads)
+[2026-10-26 14:18:40,973] [web:france24] scraping (12812 URLs, 1.0 req/s, 3 threads)
+[2026-10-26 14:18:50,645] [web:ary_news] finished (ran out of URLs)
+[2026-10-26 14:18:53,392] [web:geo_tv] finished (ran out of URLs)
+[2026-10-26 14:20:11,906] [web:guardian] finished (ran out of URLs)
+[2026-10-26 14:22:46,977] [web:dawn] finished (ran out of URLs)
+[2026-10-26 18:03:56,854] [web:cnn] STOPPED: BLOCKED (15 blocks in a row)
+[2026-10-26 18:10:31,528] [web:dw] STOPPED: PAYWALLED (almost every article is too short)
+[2026-10-26 18:11:00,346] [web:npr] STOPPED: PAYWALLED (almost every article is too short)
+[2026-10-26 18:11:56,689] [web:independent] STOPPED: PAYWALLED (almost every article is too short)
+[2026-10-26 18:14:14,174] [web:express_tribune] STOPPED: PAYWALLED (almost every article is too short)
+[2026-10-26 18:14:37,619] [web:cbs_news] STOPPED: PAYWALLED (almost every article is too short)
+[2026-10-26 18:27:11,044] [web:france24] STOPPED: TOO MANY NETWORK ERRORS
+[2026-10-26 21:57:49,710] [web:fox_news] done

@@ -1,0 +1,127 @@
+{
+  "web:bbc": {
+    "articles": 113,
+    "target": 6000,
+    "status": "NO URLS FOUND (site may block sitemaps) - Common Crawl/datasets cover it",
+    "problems": {}
+  },
+  "web:ary_news": {
+    "articles": 125,
+    "target": 6000,
+    "status": "finished (ran out of URLs)",
+    "problems": {
+      "TOO_SHORT_OR_PAYWALL": 11
+    }
+  },
+  "web:cnn": {
+    "articles": 83,
+    "target": 6000,
+    "status": "STOPPED: BLOCKED (15 blocks in a row)",
+    "problems": {
+      "HTTP_403": 26,
+      "TOO_SHORT_OR_PAYWALL": 2,
+      "NO_RESPONSE": 1
+    }
+  },
+  "web:the_news_pk": {
+    "articles": 325,
+    "target": 6000,
+    "status": "finished (ran out of URLs)",
+    "problems": {
+      "TOO_SHORT_OR_PAYWALL": 3
+    }
+  },
+  "web:geo_tv": {
+    "articles": 219,
+    "target": 6000,
+    "status": "finished (ran out of URLs)",
+    "problems": {
+      "TOO_SHORT_OR_PAYWALL": 12
+    }
+  },
+  "web:guardian": {
+    "articles": 424,
+    "target": 6000,
+    "status": "finished (ran out of URLs)",
+    "problems": {
+      "TOO_SHORT_OR_PAYWALL": 8
+    }
+  },
+  "web:dawn": {
+    "articles": 653,
+    "target": 6000,
+    "status": "finished (ran out of URLs)",
+    "problems": {
+      "TOO_SHORT_OR_PAYWALL": 51,
+      "NO_RESPONSE": 1
+    }
+  },
+  "web:dw": {
+    "articles": 2353,
+    "target": 6000,
+    "status": "STOPPED: PAYWALLED (almost every article is too short)",
+    "problems": {
+      "TOO_SHORT_OR_PAYWALL": 502,
+      "NO_RESPONSE": 3
+    }
+  },
+  "web:cbs_news": {
+    "articles": 6003,
+    "target": 11000,
+    "status": "STOPPED: PAYWALLED (almost every article is too short)",
+    "problems": {
+      "TOO_SHORT_OR_PAYWALL": 502,
+      "NO_RESPONSE": 6,
+      "HTTP_406": 1
+    }
+  },
+  "web:express_tribune": {
+    "articles": 6003,
+    "target": 11000,
+    "status": "STOPPED: PAYWALLED (almost every article is too short)",
+    "problems": {
+      "TOO_SHORT_OR_PAYWALL": 501,
+      "NO_RESPONSE": 1
+    }
+  },
+  "web:france24": {
+    "articles": 6006,
+    "target": 11000,
+    "status": "STOPPED: TOO MANY NETWORK ERRORS",
+    "problems": {
+      "TOO_SHORT_OR_PAYWALL": 219,
+      "HTTP_403": 8,
+      "NO_RESPONSE": 32
+    }
+  },
+  "web:fox_news": {
+    "articles": 11001,
+    "target": 11000,
+    "status": "done",
+    "problems": {
+      "TOO_SHORT_OR_PAYWALL": 430,
+      "NO_RESPONSE": 23,
+      "HTTP_404": 1,
+      "HTTP_502": 1
+    }
+  },
+  "web:independent": {
+    "articles": 6000,
+    "target": 11000,
+    "status": "STOPPED: PAYWALLED (almost every article is too short)",
+    "problems": {
+      "TOO_SHORT_OR_PAYWALL": 496,
+      "HTTP_404": 6,
+      "NO_RESPONSE": 1
+    }
+  },
+  "web:npr": {
+    "articles": 6003,
+    "target": 11000,
+    "status": "STOPPED: PAYWALLED (almost every article is too short)",
+    "problems": {
+      "TOO_SHORT_OR_PAYWALL": 501,
+      "NO_RESPONSE": 1
+    }
+  }
+}

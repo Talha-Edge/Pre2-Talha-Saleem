@@ -1,0 +1,12 @@
+{
+  "France 24": "https://www.france24.com/en/rss",
+  "ABC News": "https://abcnews.go.com/abcnews/topstories",
+  "CNN": "http://rss.cnn.com/rss/edition.rss",
+  "BBC": "https://feeds.bbci.co.uk/news/rss.xml",
+  "FOX NEWS": "https://moxie.foxnews.com/google-publisher/latest.xml",
+  "Aljazira English": "https://www.aljazeera.com/xml/rss/all.xml",
+  "Newyork Times": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+  "Washinton Post": "https://feeds.washingtonpost.com/rss/world",
+  "ARY": "https://arynews.tv/feed/",
+  "Express": "https://tribune.com.pk/feed/latest"
+}

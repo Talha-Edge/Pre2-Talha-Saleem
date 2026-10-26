@@ -1,0 +1,52 @@
+{
+  "global": {
+    "target_total": 100000,
+    "min_words": 200,
+    "contact": "your-email@example.com",
+    "web_default_rps": 1.0,
+    "cc_threads": 12,
+    "cc_rps": 8,
+    "progress_every_sec": 30
+  },
+
+  "web_sources": [
+    {"name": "france24",        "url": "https://www.france24.com/en/",        "target": 11000, "workers": 3, "rps": 1.0, "sitemaps": [], "rss": [], "enabled": true},
+    {"name": "fox_news",        "url": "https://www.foxnews.com",             "target": 11000, "workers": 3, "rps": 1.0, "sitemaps": [], "rss": [], "enabled": true},
+    {"name": "cbs_news",        "url": "https://www.cbsnews.com",             "target": 11000, "workers": 3, "rps": 1.0, "sitemaps": [], "rss": [], "enabled": true},
+    {"name": "npr",             "url": "https://www.npr.org",                 "target": 11000, "workers": 3, "rps": 1.0, "sitemaps": [], "rss": [], "enabled": true},
+    {"name": "independent",     "url": "https://www.independent.co.uk",       "target": 11000, "workers": 3, "rps": 1.0, "sitemaps": [], "rss": [], "enabled": true},
+    {"name": "express_tribune", "url": "https://tribune.com.pk",              "target": 11000, "workers": 3, "rps": 1.0, "sitemaps": [], "rss": [], "enabled": true},
+    {"name": "dw",              "url": "https://www.dw.com/en/",              "target": 6000,  "workers": 3, "rps": 1.0, "sitemaps": [], "rss": [], "enabled": true},
+    {"name": "cnn",             "url": "https://edition.cnn.com",             "target": 6000,  "workers": 3, "rps": 1.0, "sitemaps": [], "rss": [], "enabled": true},
+    {"name": "ary_news",        "url": "https://arynews.tv",                  "target": 6000,  "workers": 3, "rps": 1.0, "sitemaps": ["https://arynews.tv/sitemap/news_sitemap.xml", "https://arynews.tv/sitemap/category_sitemap.xml"], "rss": [], "enabled": true},
+    {"name": "dawn",            "url": "https://www.dawn.com",                "target": 6000,  "workers": 3, "rps": 1.0, "sitemaps": ["https://www.dawn.com/feeds/sitemap"], "rss": [], "enabled": true},
+    {"name": "the_news_pk",     "url": "https://www.thenews.com.pk",          "target": 6000,  "workers": 3, "rps": 1.0, "sitemaps": ["https://www.thenews.com.pk/sitemap.xml"], "rss": [], "enabled": true},
+    {"name": "guardian",        "url": "https://www.theguardian.com/international", "target": 6000, "workers": 3, "rps": 1.0, "sitemaps": ["https://www.theguardian.com/sitemaps/news.xml"], "rss": [], "enabled": true},
+    {"name": "geo_tv",          "url": "https://www.geo.tv",                  "target": 6000,  "workers": 3, "rps": 1.0, "sitemaps": [], "rss": [], "enabled": true},
+    {"name": "bbc",             "url": "https://www.bbc.com/news",            "target": 6000,  "workers": 3, "rps": 1.0, "sitemaps": [], "rss": [], "enabled": true},
+
+    {"name": "abc_news",        "url": "https://abcnews.go.com",              "target": 6000, "workers": 3, "rps": 1.0, "sitemaps": [], "rss": [], "enabled": false},
+    {"name": "aljazeera",       "url": "https://www.aljazeera.com",           "target": 6000, "workers": 3, "rps": 1.0, "sitemaps": [], "rss": [], "enabled": false},
+    {"name": "sky_news",        "url": "https://news.sky.com",                "target": 6000, "workers": 3, "rps": 1.0, "sitemaps": [], "rss": [], "enabled": false},
+    {"name": "nbc_news",        "url": "https://www.nbcnews.com",             "target": 6000, "workers": 3, "rps": 1.0, "sitemaps": [], "rss": [], "enabled": false},
+    {"name": "nytimes",         "url": "https://www.nytimes.com",             "target": 1500, "workers": 2, "rps": 0.5, "sitemaps": [], "rss": [], "enabled": false},
+    {"name": "washington_post", "url": "https://www.washingtonpost.com",      "target": 1500, "workers": 2, "rps": 0.5, "sitemaps": [], "rss": [], "enabled": false}
+  ],
+
+  "commoncrawl": {
+    "enabled": false,
+    "crawls_to_use": 3,
+    "domains": [
+      {"name": "cnn",             "domain": "cnn.com",            "target": 2500},
+      {"name": "bbc",             "domain": "bbc.com",            "target": 2500},
+      {"name": "fox_news",        "domain": "foxnews.com",        "target": 2500},
+      {"name": "aljazeera",       "domain": "aljazeera.com",      "target": 2500}
+    ]
+  },
+
+  "datasets": [
+    {"name": "cc_news",       "hf_id": "vblagoje/cc_news",        "config": null,    "split": "train",
+     "text_field": "text",    "title_field": "title", "url_field": "url", "date_field": "date",
+     "channel_field": "domain", "target": 25000, "enabled": false}
+  ]
+}

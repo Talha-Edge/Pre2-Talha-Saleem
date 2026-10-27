@@ -1,9 +1,18 @@
-# Byte-compiled / optimized / DLL files
+# Environments
+.env
+.venv/
+articles_env/
+env/
+venv/
+
+# Python cache
 __pycache__/
 *.py[cod]
 *$py.class
+*.log
 
-# Large files exceeding GitHub 100MB limit
-output_bulk/data/
-output_bulk/final/articles_bulk.csv
-articles_bulk.csv
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

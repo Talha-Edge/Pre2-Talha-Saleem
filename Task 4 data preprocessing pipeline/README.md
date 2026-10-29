@@ -1,59 +1,42 @@
-# Task 4: News Article Data Preprocessing & Cleaning Pipeline
+# Task 4: News Article Data Preprocessing & Quality Engineering
 
-A production-grade, modular 8-stage data preprocessing and quality assurance pipeline designed to clean, standardize, validate, deduplicate, and score large-scale scraped news articles.
+A modular, production-grade data preprocessing, sanitization, and quality assurance pipeline built strictly according to the **LimeX Scraped News Data Preprocessing Lecture Curriculum**.
 
 ---
 
 ## 📌 Project Overview
 
-Following **Task 1 & Task 2** (scraping 100k+ news articles) and **Task 3** (database storage and batch ingestion), **Task 4** focuses on raw data engineering, text sanitization, and machine-learning-ready feature extraction.
+Following **Task 1 & Task 2** (large-scale scraping of 100k+ news articles) and **Task 3** (PostgreSQL transactional storage and batch upsert ingestion), **Task 4** focuses on raw data engineering, text sanitization, and machine-learning-ready feature extraction.
 
-Scraped web articles often contain noise: raw HTML snippets, navigational boilerplate ("Click here to subscribe"), missing timestamps, duplicate syndicated wire reports, malformed URLs, and non-article content. This pipeline systematically filters out noisy records, normalizes text into canonical format, and produces clean CSV and Parquet outputs accompanied by automated audit reports.
+Scraped web articles often contain noise: raw HTML tags, embedded scripts, broken character references, tracking query parameters, timezone mismatches, duplicate syndicated wire reports, malformed URLs, and non-article error pages. This pipeline systematically audits, cleans, validates, and partitions raw scraped articles into production datasets.
 
 ---
 
-## 🏗️ 8-Stage Architecture
+## 🏗️ 18-Section Lecture Pipeline Architecture
 
-```
-Raw CSV Ingestion
-       │
-       ▼
-Stage 1: Ingestion & Column Normalization
-       │
-       ▼
-Stage 2: Exploratory Profiling & Missingness Auditing
-       │
-       ▼
-Stage 3: Schema Standardization & Canonical Datatypes
-       │
-       ▼
-Stage 4: Validation Engine & Rule-Based Filtering
-       │
-       ▼
-Stage 5: Deduplication (Exact URL/Content + Near-Duplicate LSH)
-       │
-       ▼
-Stage 6: Text Cleaning, HTML Sanitization & Boilerplate Stripping
-       │
-       ▼
-Stage 7: Multi-Metric Quality Assessment & Grading (A/B/C/F)
-       │
-       ▼
-Stage 8: Partitioned Export (CSV & Parquet) + Audit Reporting
-```
+The pipeline follows the exact curriculum sequence established in the LimeX Pre-Internship Data Preprocessing lecture:
 
-### Detailed Breakdown of Stages
-
-| Stage | Name | Description | Key Mechanics |
-| :---: | :--- | :--- | :--- |
-| **1** | **Ingestion** | Dynamic file resolution with fallback search across known directories | Fast chunk-safe ingestion with pandas, UTF-8 normalization |
-| **2** | **Profiling** | Deep initial inspection of raw attributes | Field nullity percentages, character/word length percentiles (min, median, max) |
-| **3** | **Standardization** | Schema unification into standard naming convention | Standardizes schema into `url`, `title`, `author`, `date`, `full_text`, `headlines`, `channel`, `source` |
-| **4** | **Validation** | Hard gate filters removing corrupted or incomplete items | URL regex validation, minimum length (min 15 words), non-empty title/text |
-| **5** | **Deduplication** | Multi-level duplicate elimination | 1) Exact URL & body SHA-256 hashing<br>2) Near-duplicate detection via MinHash/Jaccard similarity |
-| **6** | **Text Cleaning** | Deep HTML entity decoding and noise removal | HTML tag stripping via BeautifulSoup, unicode unescaping, boilerplate regex removal, whitespace normalization |
-| **7** | **Quality Scoring** | Continuous multi-field completeness & quality grade assignment | Weighted completeness score (0–100%) and categorizing into Grades A, B, C, F |
-| **8** | **Export & Reports** | Serialization to disk in dual formats with verification | High-compression Parquet + CSV exports, comprehensive JSON & Markdown audit reports |
+| Section | Topic | Key Engineering Mechanics |
+| :---: | :--- | :--- |
+| **0** | **Concepts Before Coding** | Data pipelines as transformation graphs; raw vs clean separation; auditability |
+| **1** | **Setup and Imports** | `pandas`, `numpy`, `unicodedata`, `re`, `html`, `urllib.parse`, `matplotlib` |
+| **2** | **Dataset Ingestion** | Dynamic file resolution (`articles_bulk_new.csv`, fallback detection, sampling toggle) |
+| **3** | **Exploratory Profiling** | Non-destructive profiling: dtypes, null counts, null percentages, distinct values |
+| **4** | **Schema Standardization** | Standardizing column names via NFKC regex, canonical coalescing into `news_url`, `title`, `published_time`, `author`, `content` |
+| **5** | **Missing & Whitespace** | Preservation of `_raw` columns; mapping tokens (`n/a`, `null`, `none`, `-`) to `pd.NA`; whitespace & newline normalization |
+| **6** | **Text & HTML Cleaning** | `HTMLParser` markup stripping (ignoring script/style/noscript), entity unescaping, typography normalization, invisible character removal |
+| **7** | **URL Validation** | Protocol verification (`http://`/`https://`), netloc extraction, domain parsing, optional tracking parameter strip |
+| **8** | **Publication Timestamps** | Safe parsing to UTC with `format="mixed"`; decomposition into `published_date_utc`, `year`, `month`, `weekday` |
+| **9** | **Text Feature Engineering** | Character & word counts for titles and content; detection of error/paywall patterns; length threshold flags |
+| **10** | **Duplicate Detection** | Multi-tier duplicate flagging: 1) exact canonical match, 2) duplicate URL, 3) normalized title + body signature |
+| **11** | **Row-Level Auditing** | Tiered classification: `critical_issues`, `review_issues`, `info_issues`, `is_critical`, `needs_review` |
+| **12** | **Dataset-Level Metrics** | Per-field completeness report table & structured machine-readable JSON metrics summary |
+| **13** | **Dataset Partitioning** | Sorting & splitting into `news_clean`, `news_review`, `news_rejected` with strict row reconciliation assertions |
+| **14** | **Reproducible Exports** | CSV exports with `utf-8-sig` encoding, excluding temporary internal signatures; JSON audit summary |
+| **15** | **Quality Visualizations** | Completeness bar charts and article content length distribution histograms via `matplotlib` |
+| **16** | **Source-Level Quality** | Groupby domain aggregation: missing content rates, short content rates, and median article lengths |
+| **17** | **Near-Duplicate TF-IDF** | TF-IDF character/word n-gram vectorization with cosine similarity matrix for near-duplicate syndication detection |
+| **18** | **Production Checklist** | Idempotency, schema stability, zero silent row loss, and audit trail compliance |
 
 ---
 
@@ -61,20 +44,23 @@ Stage 8: Partitioned Export (CSV & Parquet) + Audit Reporting
 
 ```
 Task 4 data preprocessing pipeline/
-├── clean_articles.py       # Production pipeline script (all 8 stages)
-├── 7.ipynb                 # Interactive Jupyter notebook walkthrough with stage demos
-├── requirements.txt        # Python library dependencies
-├── README.md               # Pipeline architecture & documentation
-└── reports/
-    ├── cleaning_report.json # Machine-readable run audit metrics & statistics
-    └── cleaning_report.md   # Human-readable summary table of cleaning run
+├── 7.ipynb                          # Complete interactive Jupyter notebook (Sections 0 to 18)
+├── clean_articles.py                # Standalone automated command-line execution script
+├── requirements.txt                 # Dependencies (pandas, numpy, openpyxl, matplotlib, scikit-learn)
+├── README.md                        # Architectural documentation and run instructions
+└── preprocessed_output/             # Pipeline output artifacts
+    ├── news_clean.csv               # High-quality clean dataset ready for NLP/ML
+    ├── news_review.csv              # Rows needing manual or rule-based review
+    ├── news_rejected.csv            # Invalid records (missing URLs, titles, bodies, exact dups)
+    ├── news_quality_report.csv      # Completeness statistics across all canonical attributes
+    └── news_preprocessing_summary.json # High-level counts and validation metrics
 ```
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Execution Guide
 
-### 1. Installation
+### 1. Requirements
 
 Install required dependencies:
 
@@ -82,50 +68,51 @@ Install required dependencies:
 pip install -r requirements.txt
 ```
 
-### 2. Running the Interactive Notebook
+### 2. Interactive Notebook (`7.ipynb`)
 
-For an interactive step-by-step walkthrough of each stage with intermediate visual outputs:
+Open `7.ipynb` in VS Code or Jupyter Notebook. It contains the complete lecture walkthrough with all explanations, code blocks, visual outputs, and exercises:
 
 ```bash
 jupyter notebook 7.ipynb
-# or open directly in VS Code
 ```
 
-> **Learning Tip:** The notebook has a `SAMPLE = 500` toggle in Cell 2 for rapid iteration and testing (~30 seconds). Set `SAMPLE = None` to process the entire dataset.
+> **Tip:** You can set `SAMPLE_ROWS = 1000` in Cell 5 for rapid interactive testing or `SAMPLE_ROWS = None` to process the entire dataset.
 
-### 3. Running the Production Pipeline Script
+### 3. Production CLI Script (`clean_articles.py`)
 
-To run the complete automated batch cleaning process:
+Run the complete 13-step batch pipeline via command-line:
 
 ```bash
+# Run on full dataset
 python clean_articles.py
+
+# Run on a 1,000 row sample
+python clean_articles.py --sample 1000
+
+# Specify custom input and output directory
+python clean_articles.py --input path/to/articles.csv --output-dir custom_output/
 ```
 
-Optional arguments:
-- `--sample 1000`: Run on a subset of 1,000 records
-- `--input path/to/file.csv`: Specify a custom input CSV path
-- `--output-dir data/clean/`: Specify custom output directory
-
 ---
 
-## 📊 Pipeline Results & Quality Summary
+## 📊 Summary Output Sample
 
-Processing summary across ~40,000 raw article records:
-
-| Metric | Result |
-| :--- | :--- |
-| **Input Rows Processed** | 39,598 |
-| **Valid Clean Rows Output** | 39,556 (99.89%) |
-| **Rejected / Low Quality Rows** | 42 (0.11%) |
-| **Exact & Near Duplicates Removed** | 12 |
-| **HTML Entities Decoded & Sanitized** | 100% of body text |
-| **Final Quality Grade A & B Articles** | > 99.5% |
-| **Export Formats** | CSV + Optimized Parquet (Snappy) |
-
----
-
-## 🛠️ Tech Stack
-- **Data Manipulation:** `pandas`, `numpy`
-- **Text Processing & Sanitization:** `beautifulsoup4`, `lxml`, `re`, `html`
-- **Deduplication:** MinHash, Jaccard Similarity, MD5/SHA-256
-- **Storage & Serialization:** `pyarrow` (Parquet), CSV
+```json
+{
+  "rows": 1000,
+  "columns": 10,
+  "invalid_or_missing_urls": 0,
+  "missing_titles": 0,
+  "missing_publication_times": 0,
+  "missing_authors": 482,
+  "missing_content": 0,
+  "critical_rows": 0,
+  "rows_needing_review": 956,
+  "exact_duplicate_rows": 0,
+  "duplicate_url_rows": 0,
+  "duplicate_text_rows": 0,
+  "clean_rows": 1000,
+  "review_rows": 956,
+  "rejected_rows": 0
+}
+```

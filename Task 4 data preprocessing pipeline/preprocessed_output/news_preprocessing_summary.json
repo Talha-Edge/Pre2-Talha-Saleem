@@ -1,0 +1,17 @@
+{
+  "rows": 1000,
+  "columns": 47,
+  "invalid_or_missing_urls": 0,
+  "missing_titles": 0,
+  "missing_publication_times": 0,
+  "missing_authors": 33,
+  "missing_content": 0,
+  "critical_rows": 0,
+  "rows_needing_review": 956,
+  "exact_duplicate_rows": 0,
+  "duplicate_url_rows": 0,
+  "duplicate_text_rows": 0,
+  "clean_rows": 1000,
+  "review_rows": 956,
+  "rejected_rows": 0
+}

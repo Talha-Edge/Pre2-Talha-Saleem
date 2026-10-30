@@ -1,17 +1,17 @@
 {
-  "rows": 1000,
+  "rows": 71907,
   "columns": 47,
-  "invalid_or_missing_urls": 0,
-  "missing_titles": 0,
-  "missing_publication_times": 0,
-  "missing_authors": 33,
-  "missing_content": 0,
-  "critical_rows": 0,
-  "rows_needing_review": 956,
+  "invalid_or_missing_urls": 55,
+  "missing_titles": 9,
+  "missing_publication_times": 8,
+  "missing_authors": 9506,
+  "missing_content": 1,
+  "critical_rows": 65,
+  "rows_needing_review": 27349,
   "exact_duplicate_rows": 0,
   "duplicate_url_rows": 0,
   "duplicate_text_rows": 0,
-  "clean_rows": 1000,
-  "review_rows": 956,
-  "rejected_rows": 0
+  "clean_rows": 71842,
+  "review_rows": 27349,
+  "rejected_rows": 65
 }
